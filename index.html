@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brick Breaker</title>
+    <style>
+        img{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <input placeholder="Input Here" size="40">
+    <p id="log"></p>
+    <script>
+        const input = document.querySelector('input');
+        const logger = document.getElementById('log');
+        input.addEventListener('keydown', event =>{
+                logger.innerHTML += (" " + event.keyCode);
+        })
+    </script> -->
+    <!-- <div id="ani-element" style="background-color: red; height: 50px; width: 20px"></div> -->
+    <!-- <button onclick="animation()" style ="font-size: 16px; color: white; background-color: aqua; width: 60px; margin: 10px 0px 0px 200px">Play</button>
+        <script>
+            function animation(){
+                const ele = document.getElementById("ani-element");
+            let start, previoustimeStamp;
+            const speed = 0.5;
+            const maxTime = 2000;
+            let done = false;
+            function step(timestamp){
+                if(start==undefined)
+                start = timestamp;
+                const elapsed = timestamp - start;
+                if (previoustimeStamp !== timestamp){
+                    const count = Math.min(483, speed * elapsed);
+                    ele.style.transform = 'translateX(' + count + 'px)'; 
+                    if (count == 200)
+                    done = true;
+                }
+                if (elapsed < maxTime){
+                    previoustimeStamp = timestamp;
+                    if (!done){
+                        window.requestAnimationFrame(step);
+                    }
+                }
+            }
+            window.requestAnimationFrame(step);
+        }
+    </script> -->
+    <!-- <script src="src/index.js"></script> -->
+    
+    <!-- <script>
+        // window.onload = function(){
+        //     let canv = document.getElementById('gamecanvas');
+        //     let ctx = canv.getContext('2d');
+            // let ball = document.getElementById('img_ball');
+            // let paddle = document.getElementById('img_paddle');
+            // ctx.drawImage(ball, 390, 554, 16, 16);
+            // ctx.drawImage(paddle, 325, 570, 150, 20);
+            // ctx.font = "bolder 80px Arial";
+            // ctx.fillStyle = "black";
+            // ctx.textAlign = "center";
+            // ctx.fillText("START GAME", 400, 300);
+            // ctx.font = "bold 40px Arial";
+            // ctx.fillStyle = "black";
+            // ctx.textAlogn = "center";
+            // ctx.fillText("|Press Enter|", 400, 400); ;
+        // }
+    </script> -->
+    <canvas id="gamecanvas" height="600"; width="800"; style="border: solid black 2px; display: block; margin-left: 22%;" ></canvas>
+    <img id="img_ball" src="assets/ball.png"/>
+    <img id="img_paddle" src="assets/paddle.png"/>
+    <img id="img_brick1" src="assets/brick-lev1.png"/>
+    <img id="img_brick2" src="assets/brick-lev2.png"/>
+    <img id="img_brick3" src="assets/brick-lev3.png"/>
+    <script type="module" src="src/index.js"></script>
+</body>
+</html>
